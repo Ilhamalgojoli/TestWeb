@@ -1,0 +1,9 @@
+1. conditional statement for displaying activity based of the mbti types
+
+select everything from kegiatan table
+r1 = r2 = ''
+ESTJ : r1 = HIPMI, r2 = Marketing Crew
+ESFJ : r1 = Al-Fath, r2 = SES
+etc
+
+- Select everything from kegiatan table where judul = r1 and judul = r2

@@ -1,0 +1,265 @@
+/* Font Imports */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+/* Variables */
+:root {
+    --color-primary: #2AB7CB;
+    --color-secondary: #4694B4;
+    --color-text: #212E50;
+    --color-highlight: rgba(55, 173, 190, 1);
+    --navbar-padding: 12px 128px;
+    --font-raleway: 'Raleway', sans-serif;
+    --font-poppins: 'Poppins', sans-serif;
+    --border-radius: 25px;
+}
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #F5F5F5;
+}
+
+/* Navbar Styles */
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    display: flex;
+    gap: 48px;
+    align-items: center;
+    padding: var(--navbar-padding);
+    height: 86px;
+    box-shadow: 0 0 37.5px 7.5px rgba(0, 0, 0, 0.25);
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.navbar img {
+    height: 64px;
+}
+
+nav ul {
+    font-size: 15px;
+    display: flex;
+    gap: 48px;
+    list-style: none;
+    text-transform: uppercase;
+    margin-right: auto;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: var(--color-text);
+    letter-spacing: 0.12em;
+    transition: color 0.3s ease;
+}
+
+nav ul a:hover {
+    color: var(--color-highlight);
+}
+
+.navlinks-bold {
+    color: var(--color-highlight);
+    font-weight: 500;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-direction: row-reverse;
+    margin-left: auto;
+}
+
+.profile img {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.profile a, .sub-menu a {
+    font-family: 'Roboto', sans-serif;
+    color: var(--color-text);
+    text-decoration: none;
+    letter-spacing: 0.12em;
+}
+
+/* Menu Wrap */
+.sub-menu-wrap {
+    position: absolute;
+    top: 100%;
+    right: 128px;
+    width: 280px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+
+.sub-menu-wrap.open-menu {
+    max-height: 200px;
+}
+
+.sub-menu {
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    padding: 16px 24px;
+    margin: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.sub-menu img {
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+}
+
+.sub-menu span {
+    margin-left: auto;
+    transition: transform 0.5s;
+}
+
+.view-profile:hover span, .log-out:hover span {
+    transform: translateX(5px);
+} 
+.view-profile:hover a, .log-out:hover a {
+    color: var(--color-highlight);
+    font-weight: 600;
+}
+
+.view-profile, .log-out {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* Kegiatan Container Styles */
+h1 {
+    font-family: var(--font-raleway);
+}
+p, .faculty, .link-group, .link-group a {
+    font-family: var(--font-poppins);
+}
+
+.container{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    background: white;
+    height: auto;
+    margin: 64px 128px;
+    padding: 64px;
+    gap: 64px;
+}
+
+.container-top {
+    display: flex;
+    justify-content: flex-start;
+    gap: 64px;
+    width: 100%;
+}
+
+.rounded-img {
+    border-radius: 25px;
+}
+
+.rounded-img img{
+    width: 300px;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.side-details {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    letter-spacing: 0.05em;
+}
+
+.detail-points {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+/* Footer Section Styles */
+.footer {
+    background-color: var(--color-text);
+    padding: 50px 128px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer p {
+    color: white;
+    font-family: var(--font-poppins);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.contact-us {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-us h3 {
+    color: white;
+    font-family: var(--font-raleway);
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.socials {
+    display: flex;
+    gap: 14px;
+}
+
+@media (max-width: 1024px) {
+    .welcome-text h1 {
+        font-size: 48px;
+    }
+    .categories {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 870px) {
+    .navbar {
+        padding: 12px 32px;
+    }
+    .welcome-text h1 {
+        font-size: 40px;
+    }
+    .discover, .test, .kegiatan {
+        margin: 64px 32px;
+    }
+}
+
+#logOutForm {
+    visibility: hidden;
+    position: absolute;
+    bottom: 0;
+}

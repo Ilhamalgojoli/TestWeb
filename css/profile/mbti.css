@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+* {
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+
+}
+
+body {
+    display: flex;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.sidebar-placeholder {
+    visibility: hidden;
+}
+
+.sidebar, .sidebar-placeholder {
+    background-color: #D9D9D9;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 64px;
+    padding: 32px 16px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    width: 10%;
+}
+
+.logo {
+    width: 48px;
+    height: max-content;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+    width: 100%;
+}
+
+.hasil-MBTI, .bakat, .group {
+    width: 100%;
+    height: 100%;
+}
+.hasil-MBTI a, .bakat a, .group a{
+    background-color: white;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    justify-content: center;
+    gap: 5px;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    font-weight: 700;
+    width: 100%;
+    height: 100%;
+}
+
+.hasil-MBTI a img, .bakat a img, .group a img {
+    width: 32px;
+}
+
+.header-section{
+    display: flex;
+    
+}
+
+.header-right {
+    margin-left: auto;
+    display: flex;    
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+.content{
+    width: 100%;
+    margin: 20px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    position: relative;
+}
+
+.bg-blue {
+    background-color: #B5D5E2;
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    z-index: -1;
+}
+
+.main {
+    display: flex;
+    gap: 32px;
+}
+
+.gambar-mbti {
+    background-color: #f1f1f1;
+    border-radius: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    padding: 32px;
+    justify-content: flex-start;
+    text-decoration: none;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    flex-grow: 1;
+}
+
+.gambar-mbti-judul h1 {
+    margin-bottom: 5px;
+}
+
+.stats-mbti {
+    background-color: #f1f1f1;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px;
+    gap: 32px;
+    justify-content: center;
+    flex-grow: 2;
+}
+
+.stats-mbti-bar {
+    display: flex;  
+    width: 100%;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.mbti-bold {
+    font-weight: 700;
+}
+
+.mbti-energi-color { color: #4751B4; }
+.mbti-pola-pikir-color { color: #CCB04F; }
+.mbti-sifat-color { color: #2A7343; }
+.mbti-taktik-color { color: #9A2FA3; }
+.mbti-identitas-color { color: #F12222; }
+
+.energi, .pola-pikir, .sifat, .taktik, .identitas {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.energi-bar, .pola-pikir-bar, .sifat-bar, .taktik-bar, .identitas-bar {
+    display: flex;
+    background-color: white;
+    border-radius: 25px;
+    height: 30px;
+    width: 100%;
+}
+
+.bar-kiri {
+    justify-content: flex-start;
+}
+.bar-kanan {
+    justify-content: flex-end;
+}
+
+.energi-bar-fill {
+    background: linear-gradient(to right, #4751B4, #1E32FF);
+}
+.pola-pikir-bar-fill {background: linear-gradient(to right, #CCB04F, #FFCB17);}
+.sifat-bar-fill {background: linear-gradient(to right, #2A7343, #00F253);}
+.taktik-bar-fill {background: linear-gradient(to right, #9A2FA3, #EC06FF);}
+.identitas-bar-fill {background: linear-gradient(to right, #F12222, #F90000);}
+
+.energi-bar-fill, .pola-pikir-bar-fill, .sifat-bar-fill, .taktik-bar-fill, .identitas-bar-fill {
+    width: 25%;
+    border-radius: 25px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);;
+}
+
+.energi-chart, .pola-pikir-chart, .sifat-chart, .taktik-chart, .identitas-chart {
+    display: flex;
+    justify-content: space-between; 
+}
+
+/* For New User */
+.mbti-message {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.mbti-message h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.mbti-link {
+    display: inline-block;
+    font-size: 18px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.mbti-link:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
